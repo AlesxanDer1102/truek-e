@@ -24,15 +24,22 @@ export const Products = ({
 				<span>Estado: {estado}</span>
 				<span>Usuario : {propietario}</span>
 			</div>
-			<div>
-				<Image
-					src='/images/estrellas.svg'
-					alt='estrellas'
-					width={110}
-					height={25}
-				/>
-				<span>{numero_de_estrellas} estrellas</span>
+			<div className='flex flex-row'>
+				{[...Array(5)].map((_, index) => (
+					<Image
+						key={index}
+						src={
+							index < numero_de_estrellas
+								? '/images/Star-fill.svg'
+								: '/images/Star-blank.svg'
+						}
+						alt={`estrella ${index + 1}`}
+						width={22}
+						height={22}
+					/>
+				))}
 			</div>
+			<span>{numero_de_estrellas} estrellas</span>
 		</div>
 	)
 }
