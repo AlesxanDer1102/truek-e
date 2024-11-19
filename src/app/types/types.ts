@@ -1,0 +1,15 @@
+export type FilterProps = {
+	index: number
+	image: string
+	title: string
+	height: number
+}
+
+export type ProductCard = {
+	id: number
+	nombre: string
+	image: string
+	estado: string
+	propietario: string
+	numero_de_estrellas: number
+}
