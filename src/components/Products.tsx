@@ -1,7 +1,7 @@
 import { ProductCard, ProductProps } from '@/types/types'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { Button } from './ui/Button'
 export const Products = ({
 	id,
 	nombre,
@@ -12,7 +12,7 @@ export const Products = ({
 }: ProductCard) => {
 	return (
 		<Link href={`/productos/${id}`}>
-			<div className='flex flex-col text-[#064E3B] rounded-lg  border-black shadow-lg p-4 hover:shadow-xl transition-shadow'>
+			<div className='flex flex-col text-[#064E3B] rounded-lg  border-black shadow-lg p-4 hover:shadow-xl transition-shadow bg-gray-100 items-center'>
 				<div className='relative w-[220px] h-[270px]'>
 					<Image
 						className='rounded-lg object-cover'
@@ -43,6 +43,7 @@ export const Products = ({
 					))}
 				</div>
 				<span>{numero_de_estrellas} estrellas</span>
+				<Button />
 			</div>
 		</Link>
 	)
@@ -81,7 +82,6 @@ export default function ProductPage({ product }: ProductProps) {
 					))}
 				</div>
 				<span>{product.numero_de_estrellas} estrellas</span>
-				
 			</div>
 		</div>
 	)
