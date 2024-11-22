@@ -1,7 +1,7 @@
 import { Filter } from '@/components/Filter'
-import { Filters } from './constants/constants'
+import { Filters } from '../constants/constants'
 import { Products } from '@/components/Products'
-import { products } from './mocks/products.json'
+import { products } from '../mocks/products.json'
 import Image from 'next/image'
 
 export default function Home() {

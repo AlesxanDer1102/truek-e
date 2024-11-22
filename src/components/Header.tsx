@@ -1,29 +1,34 @@
 import Image from 'next/image'
-
+import Link from 'next/link'
 export const Header = () => {
 	return (
 		<div className='bg-[#064E3B]'>
 			<div className='flex flex-row  justify-between items-center px-8 py-4'>
-				<div className='flex flex-row items-center'>
-					<Image
-						src='/images/Icon.svg'
-						alt='Logo Truek-e'
-						width={100}
-						height={100}
-					/>
-					<strong className=''>Truek-e</strong>
-				</div>
+				<Link href='/'>
+					<div className='flex flex-row items-center'>
+						<Image
+							src='/images/Icon.svg'
+							alt='Logo Truek-e'
+							width={100}
+							height={100}
+						/>
+						<strong className=''>Truek-e</strong>
+					</div>
+				</Link>
+
 				<div className='flex flex-row items-center gap-2'>
 					<span>Publica tu oferta</span>
-					<div>
-						<Image
-							className='object contain'
-							src='/images/Perfil.svg'
-							alt='imagen de perfil'
-							width={60}
-							height={60}
-						/>
-					</div>
+					<Link href='/perfil/1'>
+						<div>
+							<Image
+								className='object contain'
+								src='/images/Perfil.svg'
+								alt='imagen de perfil'
+								width={60}
+								height={60}
+							/>
+						</div>
+					</Link>
 				</div>
 			</div>
 			<div className='flex flex-row justify-center items-center gap-2 p-4'>

@@ -1,4 +1,4 @@
-import { FilterProps } from '@/app/types/types'
+import { FilterProps } from '@/types/types'
 import Image from 'next/image'
 
 export const Filter = ({ image, title, height }: FilterProps) => {
